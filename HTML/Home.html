@@ -13,14 +13,14 @@
         .dots-container {
             display: flex;
             justify-content: space-between;
-            max-width: 80%; 
+            max-width: 100%; 
             
         }
         .bottomBorder{
             border: 1px solid black;
             position: fixed;
             bottom: 0;
-            width: 98% !important;
+            width: 99% !important;
             background-color: rgba(88, 87, 87, 0.767);
             box-sizing: border-box; 
             justify-content: center;
@@ -47,13 +47,24 @@
 <div class = "headerBorder">
 <h1>HUE LIGHTS DASHBOARD</h1>
 </div>
+<button  onclick="addCircles()">Change lights </button>
 <div class = "bottomBorder">
-    <div class ="dots-container">
+    <div class ="dots-container" id = "dotContainer">
+    <!--span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <span class="dot"></span-->
     </div>
 </div>
+<script>
+    function addCircles()
+    {
+        console.log("We're adding circles")
+        container = document.getElementById("dotContainer")
+        circle = document.createElement("span")
+        circle.setAttribute("class","dot")
+        container.appendChild(circle)
+    }
+</script>
 </body>
 </html>
